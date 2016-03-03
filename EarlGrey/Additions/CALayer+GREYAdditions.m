@@ -72,6 +72,8 @@ static void const *const kPausedAnimationKeys = &kPausedAnimationKeys;
   if (!GREY_CONFIG_BOOL(kGREYConfigKeyCALayerModifyAnimations)) {
     return;
   }
+    
+    NSLog(@"DEBUGGING! animation = %@, animation, delegate = %@", animation, animation.delegate);
 
   CFTimeInterval maxAllowableAnimationDuration =
       (CFTimeInterval)GREY_CONFIG_DOUBLE(kGREYConfigKeyCALayerMaxAnimationDuration);
